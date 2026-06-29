@@ -3,6 +3,7 @@ $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 
 py -m pip install --quiet pyinstaller pystray Pillow requests  # ponytail: no redirigir stderr; en PS 5.1 2>$null lo envuelve en NativeCommandError y aborta con -Stop
+py -c "from PIL import Image; img=Image.open('Tokei.png'); img.save('Tokei.ico', sizes=[(256,256),(64,64),(32,32),(16,16)])"
 py -m PyInstaller --noconsole --onefile --clean --name "Tokei" --icon "Tokei.ico" tokei.py
 
 $exe = Join-Path $PSScriptRoot "dist\Tokei.exe"
