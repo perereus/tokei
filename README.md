@@ -2,8 +2,6 @@
 
 System tray icon that shows your Claude usage limits. The number on the icon = **% of the 5h session limit** (green <60, amber 60–85, red >85) on a black background. Right-click opens a menu with every limit (session + weekly) including progress bar, % and reset time.
 
-![Tokei icon](Tokei.png)
-
 ## Quick start (no build needed)
 
 ```powershell
